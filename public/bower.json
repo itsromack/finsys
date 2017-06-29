@@ -1,0 +1,38 @@
+{
+  "name": "knightcorp",
+  "authors": [
+    "CirrenaLabs <cirrenalabs@gmail.com>"
+  ],
+  "description": "KnightCorp",
+  "main": "",
+  "keywords": [
+    "insurance"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gmaps": "^0.4.24",
+    "bootstrap-daterangepicker": "^2.1.24",
+    "bootstrap-switch": "^3.3.2",
+    "bootstrap-datepicker": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "prototypejs": "prototype.js#^1.7.1",
+    "font-awesome": "Font-Awesome#^4.6.3",
+    "select2": "^4.0.3",
+    "dropzone": "^4.3.0",
+    "AdminLTE": "admin-lte#^2.3.6",
+    "datatables.net-bs": "^1.10.12",
+    "bootstrap-material-design": "^4.0.2",
+    "semantic": "semantic-ui#^2.2.10",
+    "scheduler": "^4.4.0",
+    "jquery-confirm2": "^3.2.0",
+    "fullcalendar": "^3.3.0",
+    "semantic-ui-calendar": "^0.0.8",
+    "chart.js": "^2.5.0"
+  }
+}

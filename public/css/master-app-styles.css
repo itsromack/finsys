@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+label {
+    font-weight: normal;
+}
+
+div.outside-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(../images/knight/banner/8.jpeg);
+    background-size: cover;
+}
+
+div.outside-wrapper > div.inner-wrapper {
+    margin-top: 10%;
+}
+
+div.outside-wrapper > div.inner-wrapper > div.wrapper-container {
+    max-width: 430px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+div.outside-wrapper .app-logo {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;  
+}
+
+div.outside-wrapper div.main-container {
+    padding: 30px 20px;
+}
+
+div.custom-form-group {
+    display: table;
+    width: 100%;
+}
+
+div.custom-form-group-row {
+    display: table-row;
+}
+
+div.custom-form-group-cell {
+    display: table-cell;
+    width: 50%;
+}
+
+.form-group-button {
+    overflow: hidden;
+}
+
+.custom-button {
+    display: block;
+    color: #FFF !important;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 5px 10px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.custom-button:hover {
+    cursor: pointer;
+    color: #FFF !important;
+    border-color: transparent;
+}
+
+.custom-button:focus {
+    outline: none !important;
+    border-color: transparent;
+}
+
+.custom-button span {
+    position: absolute;
+    top: -2px;
+    padding: 7px 10px;
+    background: rgba(134, 134, 134, 0.5);
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.custom-button span.left-icon {
+    left: -40px;
+}
+
+.custom-button span.right-icon {
+    right: -40px;
+}
+
+.custom-button span.left-icon.active,
+.custom-button:hover span.left-icon {
+    left: -1px;
+}
+
+.custom-button span.right-icon.active,
+.custom-button:hover span.right-icon {
+    right: -1px;
+}
+
+.custom-button label {
+    display: inline-block;
+    margin: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.custom-button:hover .label-left {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.custom-button:hover .label-right {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btn-default {
+    background: #DDD;
+}
+
+img {
+    max-width: 100%;
+}
+
+.material-switch {
+    position: relative;
+}
+
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+
+.label-primary {
+    background-color: #428bca;
+}
+
+.material-switch > span {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
+div.forgot-password-container {
+    text-align: right;
+}
+
+div.forgot-password-container > a {
+    color: #333;
+    padding-top: 2px;
+    text-decoration: underline;
+}
+
+div.forgot-password-container > a:hover {
+    color: #0073ae;
+}
+
+.custom-input-style {
+    width: 100%;
+    height: 38px;
+    padding: 8px 14px;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 2px solid #DDD;
+    border-radius: 0 !important;
+    -webkit-transition: border-color ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s;
+    transition: border-color ease-in-out .15s;
+}
+
+.custom-input-style:focus {
+    border-color: #AAA;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.custom-input-style:focus + i {
+    color: #0275d8;
+}
+
+.form-group-with-icon {
+    position: relative;
+}
+
+.form-group-with-icon > i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.alert {
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+span#rememberPasswordSpan:hover {
+    cursor: pointer;
+}
+
+.has-error-class input {
+    border-color: #de8282;
+}
+
+.has-error-class i {
+    color: #de8282;
+}
+
+.help-block {
+    color: #e83939;
+}
