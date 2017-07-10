@@ -4,29 +4,19 @@
 
         app.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
 
-            /*$urlRouterProvider.otherwise('/carApp');
+           $urlRouterProvider.otherwise('/');
 
             $stateProvider
-            	.state('home', {
-                    url: '/',
-                    templateUrl: 'app/views/home.html',
-                    controller :  'homeCtrl as home'
-                })
-            	.state('about', {
-                    url: '/about',
-                    templateUrl: 'app/views/about.html',
-                    controller :  'aboutCtrl as about'
-                })
-                .state('reserve', {
-                    url: '/reserve',
-                    templateUrl: 'app/views/reservation.html',
-                    controller :  'reserveCtrl as reserve'
-                }).state('login', {
-                    url: '/login',
-                    templateUrl: 'app/views/maintanance.html',
-                    controller :  'maintenanceCtrl as maintain'
-                });            */
+            	.state('client', {
+                    url: '/client',
+                    templateUrl: 'app/views/client.html',
+                    controller :  'clientCtrl as client'
+                }).state('stAccount', {
+                    url: '/stAccount',
+                    templateUrl: 'app/views/stAccount.html',
+                    controller :  'stAccountCtrl as stAccount'
+                });           
             //for removable of # in url
-            $locationProvider.html5Mode(true);
+          /*  $locationProvider.html5Mode(true);*/
         });
 })();

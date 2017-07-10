@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>finsys-app</title>
 	
-	  <base href="/finsys/"><base>
+	<!--   <base href="/finsys/"><base> -->
     
     <!-- Core lib-->
     <script src="http://localhost//finsys/front-end/app/vendor/angular/core/angular.js"></script>
@@ -37,8 +37,10 @@
   </head>
   <body ng-controller="mainController as mainCtrl">
   <header>
-</header> 
-	 <div class="container-fluid" data-role="page">
+  </header> 
+	 
+   <div class="container-fluid" data-role="page">
+
                <div class="row">
                        <div class="col-sm-3 col-md-2 sidebar">
                           <ul class="nav">
@@ -47,12 +49,12 @@
                           <ul class="nav nav-sidebar"></ul>
                           <ul class="nav nav-sidebar">
                             <li><a href="">Dashboard</a></li>
-                            <li><a href="">Statement of Accounts</a></li>
+                            <li><a ui-sref="stAccount">Statement of Accounts</a></li>
                              <li><a href="">Purchase Orders</a></li>
                               <li><a href="">Payments</a></li>
                                <li><a href="">Funds Tracking</a></li>
                                 <li><a href="">Balance Sheet</a></li>
-                                 <li><a href="">Clients</a></li>
+                                 <li><a ui-sref="client">Clients</a></li>
                                   <li><a href="">Supplienrs</a></li>
                                    <li><a href="">Logout</a></li>
 
@@ -82,4 +84,7 @@
   <!-- Finsys-->
   <script src="http://localhost//finsys/front-end/app/app.js"></script>
   <script src="http://localhost//finsys/front-end/app/config/finsys-router.js"></script>
+  <script src="http://localhost//finsys/front-end/app/controllers/containerController.js"></script>
+  <script src="http://localhost//finsys/front-end/app/controllers/clientController.js"></script>
+  <script src="http://localhost//finsys/front-end/app/controllers/statementAccountController.js"></script>
 </html>

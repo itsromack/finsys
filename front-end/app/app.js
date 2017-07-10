@@ -1,7 +1,8 @@
 (function () {
     "use strict";
         angular.module('finsys-app',
-        [ 'finsys-app.router'
+        [ 'finsys-app.router',
+           'finsys-app.controller'
         ]).
         
         
