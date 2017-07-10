@@ -16,7 +16,16 @@ class ClientsController extends Controller
         ));
     }
 
-    public function get($id)
+    public function api_list()
+    {
+        $clients = Client::all();
+        return response()->json([
+            'success' => true,
+            'clients' => $clients
+        ]);
+    }
+
+    public function api_get($id)
     {
         $client = Client::find($id);
         if (!is_null($client))
@@ -28,6 +37,20 @@ class ClientsController extends Controller
         }
         return response()->json([
             'success' => false
+        ]);
+    }
+
+    public function api_new(Request $request)
+    {
+        return response()->json([
+            'success' => true
+        ]);
+    }
+
+    public function api_update(Request $request)
+    {
+        return response()->json([
+            'success' => true
         ]);
     }
 
