@@ -14,8 +14,11 @@ class CreateStatementAccountItemsTable extends Migration
     public function up()
     {
         Schema::create('statement_account_items', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
+            $table->bigInteger('sa_id');
+            $table->string('details', 255)->nullable()->default(null);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

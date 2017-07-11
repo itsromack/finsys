@@ -33,6 +33,11 @@ class Client extends Model
         'postal_code',
         'country',
         'profession',
+        'passport_id',
+        'passport_issued_at',
+        'passport_issued_by',
+        'passport_expiry',
+        'passport_scanned_file',
         'nationality',
         'created_by',
         'last_updated_by'

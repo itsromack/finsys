@@ -31,6 +31,11 @@ class CreateClientsTable extends Migration
             $table->string('postal_code', 10)->nullable();
             $table->string('country', 100)->nullable();
             $table->string('profession', 100)->nullable();
+            $table->string('passport_id', 30)->nullable();
+            $table->datetime('passport_issued_at')->nullable();
+            $table->string('passport_issued_by', 200)->nullable();
+            $table->date('passport_expiry')->nullable();
+            $table->string('passport_scanned_file', 500)->nullable();
             $table->string('nationality', 100)->nullable()->default('Filipino');
             $table->bigInteger('created_by')->nullable()->default(null);
             $table->bigInteger('last_updated_by')->nullable()->default(null);

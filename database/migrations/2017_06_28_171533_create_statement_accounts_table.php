@@ -19,9 +19,15 @@ class CreateStatementAccountsTable extends Migration
             $table->string('sa_number', 20)->nullable()->default(null);
             $table->string('or_number', 20)->nullable()->default(null);
             $table->date('transaction_date')->nullable()->default(null);
+            $table->integer('pax')->nullable()->default(null);
+            $table->string('currency', 5)->nullable()->default('PHP');
             $table->double('amount')->nullable()->default(null);
-            $table->string('payment_mode', 20)->nullable()->default('WALK IN');
+            $table->string('payment_mode', 20)->nullable()->default('CASH');
             $table->string('transaction_type', 20)->nullable()->default('WALK IN');
+            $table->string('client_type', 5)->nullable()->default('B');
+            $table->text('details')->nullable()->default(null);
+            $table->text('staff_notes')->nullable()->default(null);
+            $table->integer('recorded_by')->nullable()->default(null);
             $table->timestamps();
         });
     }
