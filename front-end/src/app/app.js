@@ -1,16 +1,34 @@
 (function () {
     "use strict";
         angular.module('finsys-app',
-        [ 'finsys-app.router',
-           'finsys-app.controller'
+        [ 
+            'finsys-app.client',
+            'finsys-app.stAccount',
+            'finsys-app.dashboard',
+            'finsys-app.suppliers',
+            'ui.router'
         ]).
         
         
         config(['$qProvider', function ($qProvider) {
             $qProvider.errorOnUnhandledRejections(false);
         }])
+
+
+        .config(routeConfig)
         .controller('mainController',mainController);
         
+        
+            function routeConfig($stateProvider, $urlRouterProvider,$locationProvider){               
+                    $urlRouterProvider.otherwise('/dashboard');
+                    //for removable of # in url
+                    //TODO: uncomment this once the context path confirmed
+                    // $locationProvider.html5Mode(true);
+            }
+
+
+
+
         mainController.$inject = ['$window','$scope','$log'];
         
         function mainController(window,scope,log){
@@ -18,7 +36,7 @@
         	
         	var year = new Date().getFullYear();
         	vm.modalApp = {
-        		header:"Car App",
+        		header:"finsys-app",
         		footer:"All rights reserved "+ year
         	};
         	window.baseUrl = window.location.href;
