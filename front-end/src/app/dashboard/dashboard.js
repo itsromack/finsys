@@ -4,7 +4,7 @@
 	*
 	* Description
 	*/
-	angular.module('finsys-app.dashboard',['ui.router','ui.bootstrap','ngTable'])
+	angular.module('finsys-app.dashboard',['ui.router','ui.bootstrap'])
 	
 	.config(routeConfig)
 	.controller('dashBoardCtrl',dashBoardController);
@@ -19,9 +19,9 @@
                 });
 	}
 
-	dashBoardController.$inject = ['$scope','$log','NgTableParams','$window'];
+	dashBoardController.$inject = ['$scope','$log','$window'];
 
-	function dashBoardController(scope,log,NgTableParams,window){
+	function dashBoardController(scope,log,window){
 			log.info("dashboard controller test");
 	}
 

@@ -4,7 +4,7 @@
 	*
 	* Description
 	*/
-	angular.module('finsys-app.suppliers',['ui.router','ui.bootstrap','ngTable'])
+	angular.module('finsys-app.suppliers',['ui.router','ui.bootstrap'])
 	
 	.config(routeConfig)
 	.controller('supplierCtrl',suppliersController);
@@ -19,9 +19,9 @@
                 });
 	}
 
-	suppliersController.$inject = ['$scope','$log','NgTableParams','$window'];
+	suppliersController.$inject = ['$scope','$log','$window'];
 
-	function suppliersController(scope,log,NgTableParams,window){
+	function suppliersController(scope,log,window){
 			log.info("suppliers controller test");
 	}
 

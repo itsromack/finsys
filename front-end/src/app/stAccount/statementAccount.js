@@ -4,7 +4,7 @@
 	*
 	* Description
 	*/
-	angular.module('finsys-app.stAccount',['ui.router','ui.bootstrap','ngTable'])
+	angular.module('finsys-app.stAccount',['ui.router','ui.bootstrap'])
 
 	.config(routeConfig)
 	.controller('stAccountCtrl',stAccountController);
@@ -19,9 +19,9 @@
                 });
 	}
 
-	stAccountController.$inject = ['$scope','$log','NgTableParams','$window'];
+	stAccountController.$inject = ['$scope','$log','$window'];
 
-	function stAccountController(scope,log,NgTableParams,window){
+	function stAccountController(scope,log,window){
 			log.info("stAccount controller test");
 	}
 
