@@ -33,7 +33,7 @@
                 header:"finsys-app",
                 footer:"All rights reserved "+ year
             };
-            window.baseUrl = window.location.href;
+           // window.baseUrl = window.location.href;
             
             log.info("main controller ");
             

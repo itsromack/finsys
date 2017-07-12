@@ -24,7 +24,8 @@
 	function clientController(scope,log,window){
 		var vm = this;
 
-		var clients = [ 
+		//TODO: remove this once the endpoint has been enabled
+		var clientsData = [ 
 
 		{fname:'allan',lastName:'test',email:'e@yahoo.com',mobile:123456,gender:'male',image:''}, 
 		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
@@ -40,18 +41,18 @@
 		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
 		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
 		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}
-		
+
 		];
 		
-		var p = [];
-		 
-		for(var i=0;  i < clients.length; i++){
-		 var arr = Object.keys(clients[i]).map(function(_) { return clients[i][_]; });
-		  p.push(arr);
-		 console.log(arr)
+		var arrayDataClient = [];
+		 //TODO: Move this logic in service
+		for(var index = 0;  index < clientsData.length; index++){
+			var clientArray = Object.keys(clientsData[index]).map(function(_) { return clientsData[index][_]; });
+				 arrayDataClient.push(clientArray);
+				 log.info(clientArray);
 		}
 
-		vm.data = p;
+		vm.data = arrayDataClient;
 	}
 
 
