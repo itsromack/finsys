@@ -1,29 +1,48 @@
+<div class="container ">
+       <div class="row">
+          <div class="panel-heading">
+          <div class="col-sm-6">   
+                  <div class="col-sm-2">
+                    <div ng-include="'assets/multiple-users-silhouette.svg'"></div>
+                   
+                  </div> 
+                  <div class="col-sm-4">
+                    <strong>Clients</strong><br/>
+                     <span class="align-bottom"> <small>Listing of all Clients</small></span>
+                  </div>
+                   <div class="col-sm-2">
+                      <button class="btn btn-danger" type="submit">Add New</button>
+                   </div>
+                    <div class="col-sm-4"></div>
+              </div>
+          </div>
 
- 
-  <div class="panel-heading border">    
-    <h2>Data table using jquery datatable in Angularjs 
-    </h2>
-  </div>
-  <div class="panel-body">
-  <!--  <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="client.dataTableOpt"> -->
-      <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Full Name</th>
-          <th>Email Address</th>
-          <th>Mobile Number</th>
-          <th>Gender</th>
-        </tr>
-      </thead>
-        <tbody>
-          <tr ng-repeat="n in client.data">
-      		  <td>{{$index+1}}</td> 
-            <td>{{n[0]}} {{n[1]}}</td>
-            <td>{{n[2]}}</td>
-            <td>{{n[3]}}</td>
-            <td>{{n[4]}}</td>
-          </tr>
-        </tbody>
-    </table>
-  </div>
+      </div>
+        <div class="row "><div class=""><hr></div></div>
+      <div class="row">
+            <div class="panel-body col-sm-10">
+            <!--  <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="client.dataTableOpt"> -->
+                <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Email Address</th>
+                    <th>Mobile Number</th>
+                    <th>Gender</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                    <tr ng-repeat="n in client.data">
+                		  <td>{{$index+1}}</td> 
+                      <td>{{n[0]}} {{n[1]}}</td>
+                      <td>{{n[2]}}</td>
+                      <td>{{n[3]}}</td>
+                      <td>{{n[4]}}</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+            <div class="col-sm-2"></div>
+      </div>
+</div>

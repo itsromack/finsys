@@ -22,48 +22,13 @@
   </header> 
    
         <div class="container-fluid" data-role="page">
-            <div id="navigation-right">
-                  <nav class="navbar navbar-inverse sidebar" role="navigation">
-                      <div class="container-fluid">
-                                <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
-                                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                  </button>
-                                  <a class="navbar-brand" href="#">Administrator</a>
-                                </div>
-
-
-
-                              <!-- Collect the nav links, forms, and other content for toggling -->
-                              <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                                <ul class="nav navbar-nav">
-                                  <li class="active"><a ui-sref="dashBoard">Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-dashboard"></span></a></li>
-                                  <li ><a ui-sref="stAccount">Statement of Accounts<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
-                                  <li ><a ui-sref="purchaseOrder">Purchase Orders<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
-                                 <li><a ui-sref="payments">Payments<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
-                                  <li><a ui-sref="fundsTracking">Funds Tracking<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
-                                  <li ><a ui-sref="balancceSheet">Balance Sheet<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
-                                  <li ><a ui-sref="client">Clients<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-                                   <li ><a ui-sref="suppliers">Suppliers<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-                                     <li ><a ui-sref="logOut">Logout<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out"></span></a></li>
-                                </ul>
-                              </div>
-                      </div>
-                    </nav>
-            </div>
+            <div id="navigation-right" finsys-nav-bar></div>
                 
-        </div>    
-          
         
-          
-          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                  <div id="app-body-page" ui-view> </div>
-          </div>
-
+              <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                      <div id="app-body-page" ui-view> </div>
+              </div>
+        </div> 
       <footer>
       </footer>
     
@@ -72,13 +37,13 @@
   
 
 
-<script src='http://localhost//finsys/front-end/vendor/jquery/jquery.js'></script>
-<script src='http://localhost//finsys/front-end/vendor/angular/core/angular.js'></script>
-<script src="http://localhost//finsys/front-end/vendor/angular/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js'></script>
-<script src='http://localhost//finsys/front-end/vendor/jquery/jquery.dataTables.min.js'></script>
-<script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
-<script src="http://localhost//finsys/front-end/vendor/angular/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src='http://localhost//finsys/front-end/vendor/jquery/jquery.js'></script>
+  <script src='http://localhost//finsys/front-end/vendor/angular/core/angular.js'></script>
+  <script src="http://localhost//finsys/front-end/vendor/angular/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js'></script>
+  <script src='http://localhost//finsys/front-end/vendor/jquery/jquery.dataTables.min.js'></script>
+  <script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
+  <script src="http://localhost//finsys/front-end/vendor/angular/angular-ui-router/release/angular-ui-router.js"></script>
 
   <!-- Finsys-->
   <script src="http://localhost//finsys/front-end/src/common/constants.js"></script>
@@ -87,7 +52,14 @@
   <script src="http://localhost//finsys/front-end/src/app/stAccount/statementAccount.js"></script>
   <script src="http://localhost//finsys/front-end/src/app/dashboard/dashboard.js"></script>
   <script src="http://localhost//finsys/front-end/src/app/suppliers/suppliers.js"></script>
+  
   <!-- service -->
   <script src="http://localhost//finsys/front-end/src/common/services/containerServices.js"></script>
   <script src="http://localhost//finsys/front-end/src/common/services/clientService.js"></script>
+
+  <!-- directives -->
+  <script src="http://localhost//finsys/front-end/src/common/directives/finsys-directives.js"></script>
+  <script src="http://localhost//finsys/front-end/src/common/directives/navbar.js"></script>
+
+
 </html>

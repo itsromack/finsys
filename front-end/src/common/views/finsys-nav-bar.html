@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse sidebar" role="navigation">
+                      <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="navbar-brand" href="#">Administrator</a>
+                                </div>
+
+
+                                <!-- TODO: Make this as dynamic like getting the values from server side. -->
+                              <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                  <li ng-class=""><a ui-sref="dashBoard" ng-click="expression">Dashboard<span  class="pull-right hidden-xs showopacity glyphicon glyphicon-dashboard"></span></a></li>
+                                  <li ><a ui-sref="stAccount">Statement of Accounts<span class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
+                                  <li ><a ui-sref="purchaseOrder">Purchase Orders<span class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
+                                 <li><a ui-sref="payments">Payments<span class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
+                                  <li><a ui-sref="fundsTracking">Funds Tracking<span class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
+                                  <li ><a ui-sref="balancceSheet">Balance Sheet<span class="pull-right hidden-xs showopacity glyphicon glyphicon-file"></span></a></li>
+                                  <li ><a ui-sref="client">Clients<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+                                   <li ><a ui-sref="suppliers">Suppliers<span class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+                                     <li ><a ui-sref="logOut">Logout<span class="pull-right hidden-xs showopacity glyphicon glyphicon-log-out"></span></a></li>
+                                </ul>
+                              </div>
+                      </div>
+                    </nav>

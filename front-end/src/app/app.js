@@ -6,6 +6,7 @@
             'finsys-app.stAccount',
             'finsys-app.dashboard',
             'finsys-app.suppliers',
+            'finsys-app.directives',
             'ui.router'
         ]).
         
@@ -23,19 +24,24 @@
             })
         .controller('mainController',mainController);
         
-        mainController.$inject = ['$window','$scope','$log'];
+        mainController.$inject = ['$window','$scope','$log','$rootScope'];
         
-        function mainController(window,scope,log){
+        function mainController(window,scope,log,$rootScope){
             var vm = this;
             
             var year = new Date().getFullYear();
+
             vm.modalApp = {
                 header:"finsys-app",
                 footer:"All rights reserved "+ year
             };
            // window.baseUrl = window.location.href;
             
-            log.info("main controller ");
+            
+
+            $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+            log.info("main controller ",toState);
+          } );
             
         }
 
