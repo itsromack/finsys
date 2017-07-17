@@ -8,17 +8,20 @@
     <title>finsys-app</title>
   
   <!--   <base href="/finsys/"><base> -->
-    
-  </head>
-  <body ng-controller="mainController as mainCtrl">
-  <header>
-   <!-- Bootstrap -->
+  <!-- for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Bootstrap -->
     <link href="http://localhost//finsys/front-end/src/css/lib/bootstrap.min.css" rel="stylesheet">
     <link href="http://localhost//finsys/front-end/src/css/dashboard.css" rel="stylesheet">
     <link href="http://localhost//finsys/front-end/src/css/side-bar.css" rel="stylesheet">
     <link href="http://localhost//finsys/front-end/src/css/image-slider.css" rel="stylesheet">
     <link href="http://localhost//finsys/front-end/src/css/form-validation.css" rel="stylesheet">
     <link href="http://localhost//finsys/front-end/src/css/finsys-datatables.css" rel="stylesheet">
+    
+  </head>
+  <body ng-controller="mainController as mainCtrl">
+  <header>
+
   </header> 
    
         <div class="container-fluid" data-role="page">
@@ -37,6 +40,8 @@
   
 
 
+
+
   <script src='http://localhost//finsys/front-end/vendor/jquery/jquery.js'></script>
   <script src='http://localhost//finsys/front-end/vendor/angular/core/angular.js'></script>
   <script src="http://localhost//finsys/front-end/vendor/angular/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
@@ -44,9 +49,10 @@
   <script src='http://localhost//finsys/front-end/vendor/jquery/jquery.dataTables.min.js'></script>
   <script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
   <script src="http://localhost//finsys/front-end/vendor/angular/angular-ui-router/release/angular-ui-router.js"></script>
-
+  <script src="http://localhost//finsys/front-end/vendor/bootstrap.min.js"></script>
   <!-- Finsys-->
   <script src="http://localhost//finsys/front-end/src/common/constants.js"></script>
+  <script src="http://localhost//finsys/front-end/src/common/modal.js"></script>
   <script src="http://localhost//finsys/front-end/src/app/app.js"></script>
   <script src="http://localhost//finsys/front-end/src/app/client/client.js"></script>
   <script src="http://localhost//finsys/front-end/src/app/stAccount/statementAccount.js"></script>
@@ -60,6 +66,6 @@
   <!-- directives -->
   <script src="http://localhost//finsys/front-end/src/common/directives/finsys-directives.js"></script>
   <script src="http://localhost//finsys/front-end/src/common/directives/navbar.js"></script>
-
+  <script src="http://localhost//finsys/front-end/src/common/directives/finsys-modal.js"></script>
 
 </html>

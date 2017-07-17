@@ -1,0 +1,42 @@
+<div>
+		<div id="" class="list-group">
+			
+					 <form class="form-horizontal"  method="post"  id="reserveForm" name="reserveForm" novalidate >
+						 <div class="col-sm-8 col-md-8">
+							 	<div class="row">
+							            <div class="form-group col-sm-5 col-md-5">
+							            	<label>First Name</label>
+							              	 <input type="text" class="form-control input-sm" id="firstName"
+							               	 name="firstName"  ng-model="ctrl.clientInfo[0]"  value="{{ctrl.clientInfo[0]}}" required >
+							            </div>
+							            <div class="form-group col-sm-2 col-md-2"></div>
+				       					<div class="form-group col-sm-5 col-md-5">
+				       						<label>Last Name</label>
+							          	     <input type="text" class="form-control input-sm" id="lastName"
+							             	   ng-model="ctrl.clientInfo[1]" name="lastName" value="{{ctrl.clientInfo[1]}}" required>
+							            </div>
+	        				</div>
+	        				<div class="row">
+	        							<div class="form-group col-sm-12 col-md-12">
+							            	<label>Email Address</label>
+							              	 <input type="email" class="form-control input-sm" id="email"
+							               	  ng-model="ctrl.clientInfo[2]" name="email" value="{{ctrl.clientInfo[2]}}"  required>
+							            </div>
+	        				</div>
+	        				<div class="row">
+	        							<div class="form-group col-sm-12 col-md-12">
+							            	<label>Contact Number</label>
+							              	 <input type="number" class="form-control input-sm" id="contactnumber"
+							               	  ng-model="ctrl.clientInfo[3]" name="contactnumber"  value="{{ctrl.clientInfo[3]}}" required>
+							            </div>
+	        				</div>
+						 </div>
+						 <div class="col-sm-4 col-md-4">
+						 	<label>Photo</label><br/>
+						 	<img src="http://placehold.it/180X180" alt="#" class="img-rounded">
+						 </div>
+						 
+        			</form>
+				
+		</div>
+</div>

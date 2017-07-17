@@ -19,40 +19,23 @@
                 });
 	}
 
-	clientController.$inject = ['$scope','$log','$window'];
+	clientController.$inject = ['$scope','$log','$window','clientService'];
 
-	function clientController(scope,log,window){
+	function clientController(scope,log,window,clientService){
 		var vm = this;
-
-		//TODO: remove this once the endpoint has been enabled
-		var clientsData = [ 
-
-		{fname:'allan',lastName:'test',email:'e@yahoo.com',mobile:123456,gender:'male',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}, 
-		{fname:'imee',lastName:'taal',email:'y@yahoo',mobile:2589631,gender:'female',image:''}
-
-		];
 		
-		var arrayDataClient = [];
-		 //TODO: Move this logic in service
-		for(var index = 0;  index < clientsData.length; index++){
-			var clientArray = Object.keys(clientsData[index]).map(function(_) { return clientsData[index][_]; });
-				 arrayDataClient.push(clientArray);
-				 log.info(clientArray);
+		vm.modal = new Modal("Client Information","app/client/modal-client.html","Cancel","Save Changes");
+
+		vm.data = clientService.showClients();
+
+		vm.addClient = function(){
+			log.info("new client was succesfuly added, " ,clientService.addClient(vm.clientInfo));
 		}
 
-		vm.data = arrayDataClient;
+
+		vm.viewInfo = function(client){
+			vm.clientInfo = client;
+		}
 	}
 
 

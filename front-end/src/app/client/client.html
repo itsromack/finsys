@@ -3,15 +3,29 @@
           <div class="panel-heading">
           <div class="col-sm-6">   
                   <div class="col-sm-2">
-                    <div ng-include="'assets/multiple-users-silhouette.svg'"></div>
-                   
+                   <span class="pull-left hidden-xs showopacity fa fa-group" style="font-size:48px"></span>
+
                   </div> 
-                  <div class="col-sm-4">
-                    <strong>Clients</strong><br/>
-                     <span class="align-bottom"> <small>Listing of all Clients</small></span>
+                  <div class="col-sm-4 pull-left ">
+                       <h4>Clients <br/> <span class="align-bottom"> <small>Listing of all Clients</small></span></h4>
+                       {{client.modal.header}}
                   </div>
-                   <div class="col-sm-2">
-                      <button class="btn btn-danger" type="submit">Add New</button>
+                   <div class="col-sm-2 pull-left ">
+                     <app-modal 
+                            modal-name="modal1" 
+                              modal-body="{{client.modal.body}}" 
+                              modal-footer="mainCtrl.modalApp.footer" 
+                             modal-header="{{client.modal.header}}" 
+                             modal-continue="{{client.modal.continue}}"
+                             modal-close="{{client.modal.close}}"
+                             data-ng-click-left-button= ""
+                             data-ng-click-right-button="client.addClient()" 
+                            ctrl = "client"
+                             ></app-modal>
+                      <button class="btn btn-danger" 
+                          data-toggle="modal" 
+                          ng-href="#{{modal1}}"
+                          ng-click="client.viewInfo()">Add New</button>
                    </div>
                     <div class="col-sm-4"></div>
               </div>
@@ -25,7 +39,7 @@
                 <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="">
                 <thead>
                   <tr>
-                    <th>#</th>
+                    <!-- <th>#</th> -->
                     <th>Full Name</th>
                     <th>Email Address</th>
                     <th>Mobile Number</th>
@@ -34,8 +48,27 @@
                 </thead>
                   <tbody>
                     <tr ng-repeat="n in client.data">
-                		  <td>{{$index+1}}</td> 
-                      <td>{{n[0]}} {{n[1]}}</td>
+                		  <!-- <td>{{$index+1}}</td>  -->
+                      <td>
+                      <app-modal 
+                            modal-name="modal1" 
+                              modal-body="{{client.modal.body}}" 
+                              modal-footer="mainCtrl.modalApp.footer" 
+                             modal-header="{{client.modal.header}}" 
+                             modal-continue="{{client.modal.continue}}"
+                             modal-close="{{client.modal.close}}"
+                             data-ng-click-left-button= ""
+                             data-ng-click-right-button="client.viewInfo(n)" 
+                            ctrl = "client"
+                             ></app-modal>
+                             
+                        <button class="btn-info" 
+                            data-toggle="modal" 
+                            ng-href="#{{modal1}}"
+                            ng-click="client.viewInfo(n)"> 
+                           <span class="glyphicon glyphicon-user"></span>
+                            Info</button> <small>{{n[0]}} {{n[1]}}</small>
+                      </td>
                       <td>{{n[2]}}</td>
                       <td>{{n[3]}}</td>
                       <td>{{n[4]}}</td>
