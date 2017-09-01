@@ -3,8 +3,8 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/api/test')
-def test(methods=['GET']):
+@app.route('/api/test', methods=['GET'])
+def test():
     data = [1, 2, 3, 4, 5, 6, 7]
     return jsonify(data)
 
